@@ -1,0 +1,18 @@
+<mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile><app-meteo-card (meteoEvent)="openSideMeteo()"></app-meteo-card></mat-grid-tile>
+    <mat-grid-tile><app-steam-card (steamEvent)="openSideSteam()"></app-steam-card></mat-grid-tile>
+    <mat-grid-tile><app-discord-card (discordEvent)="openSideDiscord()"></app-discord-card></mat-grid-tile>
+    <mat-grid-tile><app-pornhub-card (pornhubEvent)="openSidePornhub()"></app-pornhub-card></mat-grid-tile>
+    <mat-grid-tile><app-outlook-card (outlookEvent)="openSideOutlook()"></app-outlook-card></mat-grid-tile>
+    <mat-grid-tile><app-google-card (googleEvent)="openSideGoogle()"></app-google-card></mat-grid-tile>
+    <mat-grid-tile><app-edamam-card (edamamEvent)="openSideEdamam()"></app-edamam-card></mat-grid-tile>
+    <mat-grid-tile><app-random-user-gen-card (randomUserGenEvent)="openSideRandomUserGen()"></app-random-user-gen-card></mat-grid-tile>
+    <mat-grid-tile><app-dogresponse-card (dogResponseEvent)="openSideDogResponse()"></app-dogresponse-card></mat-grid-tile>
+    <mat-grid-tile><app-catresponse-card (catResponseEvent)="openSideCatResponseEvent()"></app-catresponse-card></mat-grid-tile>
+    <mat-grid-tile><app-ip-card (ipEvent)=" openSideIp()"></app-ip-card></mat-grid-tile>
+    <mat-grid-tile><app-kitten-card (kittenEvent)=" openSideKitten()"></app-kitten-card></mat-grid-tile>
+    <mat-grid-tile><app-fact-card (factEvent)=" openSideFact()"></app-fact-card></mat-grid-tile>
+    <mat-grid-tile><app-numb-card (numbEvent)=" openSideNumb()"></app-numb-card></mat-grid-tile>
+    <!-- <mat-grid-tile><app-home></app-home></mat-grid-tile>
+    <mat-grid-tile><app-home></app-home></mat-grid-tile> -->
+  </mat-grid-list>

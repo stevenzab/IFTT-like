@@ -1,0 +1,29 @@
+<!-- Toolbar -->
+<a *ngIf="checkConnect() != false">
+    <mat-toolbar class="app-header">
+        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="menu">
+            <mat-button mat-menu-item mat-raised-button routerLink="user" routerLinkActive="active">
+                <mat-icon>account_circle</mat-icon>
+                <span>Utilisateur</span>
+            </mat-button>
+            <mat-button mat-menu-item mat-raised-button routerLink="client.apk">
+                <mat-icon>save_alt</mat-icon>
+                <span>Télécharger l'apk</span>
+            </mat-button>
+            <mat-button mat-menu-item mat-raised-button routerLink="about">
+                <mat-icon>grade</mat-icon>
+                <span>A propos</span>
+            </mat-button>
+            <mat-button mat-menu-item mat-raised-button (click)="disconnect()">
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Se déconnecter</span>
+            </mat-button>
+        </mat-menu>
+        <div><a mat-button routerLink="home" routerLinkActive="active" class="Home">Home</a></div>
+        <!-- <div><a mat-button routerLink="result" routerLinkActive="active" class="result" >Areas</a></div> -->
+    </mat-toolbar>
+</a>
+<router-outlet></router-outlet>

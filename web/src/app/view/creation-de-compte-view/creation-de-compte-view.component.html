@@ -1,0 +1,9 @@
+<div class="register-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="form-card" *ngIf="!IsWait">
+        <mat-card-header class="title">Inscription</mat-card-header>
+        <br>
+        <app-creation-de-compte (loadEvent)="loading()"></app-creation-de-compte>
+    </mat-card>
+    <mat-progress-spinner mode="indeterminate" *ngIf="IsWait">
+    </mat-progress-spinner>
+</div>

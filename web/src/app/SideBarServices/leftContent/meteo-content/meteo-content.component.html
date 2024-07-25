@@ -1,0 +1,88 @@
+<div fxLayout="column" fxLayoutAlign="center">
+       <mat-card>
+            <mat-card-header>
+                <strong>
+                    Action : {{acrea[0].acrea_name}} 
+                </strong>
+            </mat-card-header>
+            <br>
+            <mat-card-subtitle>
+                {{acrea[0].acrea_description}}
+            </mat-card-subtitle>
+            <mat-card-content>
+                <form [formGroup]="formGroups_1">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Ville</mat-label>
+                        <input matInput formControlName="Ville" name="Ville"  required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" >
+                        <mat-label>Symbole de comparaison</mat-label>
+                        <input matInput formControlName="Symbole" name="Symbole"  required>
+                    </mat-form-field>
+    
+                    <mat-form-field appearance="outline" >
+                        <mat-label>Temperature</mat-label>
+                        <input matInput formControlName="Temperature" name="Temperature" required>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+            <button mat-raised-button color="primary"  (click)="sendOne()">Utiliser</button>
+        </mat-card>
+
+<br>
+<br>
+
+    <mat-card>
+        <mat-card-header>
+            <strong>
+                Action : {{acrea[1].acrea_name}} 
+            </strong>
+        </mat-card-header>
+        <mat-card-subtitle>
+            {{acrea[1].acrea_description}}
+        </mat-card-subtitle>
+        <mat-card-content>
+            <form [formGroup]="formGroups_2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Ville</mat-label>
+                    <input matInput formControlName="Ville" name="Ville"  required>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" >
+                    <mat-label>Symbole de comparaison</mat-label>
+                    <input matInput formControlName="Symbole" name="Symbole"  required>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" >
+                    <mat-label>Taux d'humidité</mat-label>
+                    <input matInput formControlName="humidité" name="humidité" required>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <button mat-raised-button color="primary" (click)="sendTwo()">Utiliser</button>
+    </mat-card>
+</div>
+
+<!-- METEO 2
+<br>
+STEAM 2 (ID, comparaison, nombres| ID)
+<br>
+GOOGLE ? ()
+<br>
+OUTLOOK 1 (message)
+<br>
+EDAMAM 1 (null ?)
+<br>
+DISCORD 2 (message | null ?)
+<br>
+PH 3 (URL de la categorie | prenom,nom| name_paramsFin f'URL)
+<br>
+CAT 1 (null ? )
+<br>
+DOG 1 (null ?)
+<br>
+RANDOM 1 ( null ?)
+ -->
+
+

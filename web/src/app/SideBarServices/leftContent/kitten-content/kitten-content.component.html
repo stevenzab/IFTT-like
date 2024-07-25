@@ -1,0 +1,18 @@
+<div fxLayout="column" fxLayoutAlign="center">
+    <mat-card>
+         <mat-card-header>
+             <strong>
+                 Reaction : {{acrea[0].acrea_name}} 
+             </strong>
+         </mat-card-header>
+         <br>
+         <mat-card-subtitle>
+             {{acrea[0].acrea_description}}
+         </mat-card-subtitle>
+
+         <div fxLayout="row" fxLayoutAlign="space-around center">
+            <button mat-raised-button color="primary" (click)="send('Discord')">Discord</button>
+            <button mat-raised-button color="primary" (click)="send('Mail')">Mail</button>  
+           </div>
+     </mat-card>
+</div>

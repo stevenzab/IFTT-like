@@ -1,0 +1,23 @@
+<div class="user-profile mdc-card--outlined" fxLayoutAlign="center center">
+
+    <form class="form">
+    <mat-card class="cart outlined">
+
+        <mat-card-header>
+            <mat-card-title>Profil d'utilisateur</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+                <h2>Profil d'utilisateur</h2>
+                <mat-icon>account_circle</mat-icon>
+                <h3>Nom : {{info.first_name}}</h3>
+                <h3>Prenom : {{info.last_name}}</h3>
+                <h3>Email : {{info.email}}</h3>
+                <h3>Mot de passe</h3>
+        </mat-card-content>
+
+    </mat-card>
+    <a mat-button type="button" (click)="deleteUser()" class="btn btn-primary">Supprimer l'utilisateur</a>
+</form>
+
+</div>

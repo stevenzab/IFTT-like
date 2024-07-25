@@ -1,0 +1,10 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" *ngIf="!IsWait">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Connexion</mat-card-title>
+      </mat-card-header>
+        <app-login (loadEvent)="loading()"></app-login>
+    </mat-card>
+</div>
+<mat-progress-spinner mode="indeterminate" *ngIf="IsWait">
+</mat-progress-spinner>

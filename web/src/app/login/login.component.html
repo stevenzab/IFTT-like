@@ -1,0 +1,40 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <form class="login-form" [formGroup]="formGroups">
+
+    <mat-card-content>
+
+        <mat-form-field appearance="outline" class="User">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="pat@example.com" name = "Email" formControlName="email" required>
+            <mat-error *ngIf="email.invalid">{{checkEmail()}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="Password">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'text' : 'password'" name="password" formControlName="password" required>
+            <mat-icon matSuffix (click)="toggleHide()"> {{hide?'visibility_off':'visibility'}} </mat-icon>
+        </mat-form-field>
+
+        <a href="/forgot-password">Mot de passe oublié ?</a>
+
+    </mat-card-content>
+
+    <div class="button">
+        <button mat-raised-button type="button" class="redirection" (click)="login()" class="btn-block">Log in</button>
+    </div>
+
+    <div class="button">
+        <a href="/CreationDeCompte" class="redirection">Inscrivez-vous</a>
+    </div>
+    
+        <div class="container mt-5">
+            <div class="row mt-5">
+                <button type="button" class="login-with-google-btn" #loginRef>
+                    Connectez vous avec Google
+                </button>
+            </div>
+         </div>
+
+    </form>
+</div>

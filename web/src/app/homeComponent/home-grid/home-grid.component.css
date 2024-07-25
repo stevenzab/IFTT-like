@@ -1,0 +1,7 @@
+mat-card {
+    background-color: aliceblue;
+    max-width: 325px;
+    max-height: 200px;
+    min-width: 325px;
+    min-height: 200px;
+  }

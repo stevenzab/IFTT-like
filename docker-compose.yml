@@ -1,0 +1,54 @@
+version: '3.8'
+volumes:
+  app:
+services:
+  database:
+    restart: always
+    image: 'postgres:14.1-alpine'
+    ports:
+      - '5433:5433'
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: areapassword
+      POSTGRES_DB: area
+  server:
+    depends_on:
+      - database
+    build: ./server
+    restart: unless-stopped
+    volumes:
+      - ./server:/usr/app
+    ports:
+      - '8080:8080'
+    environment:
+      - METEO=${METEO}
+      - DISCORD=${DISCORD}
+      - EDAMAM=${EDAMAM}
+      - EDAMAM_ID=${EDAMAM_ID}
+      - GOOGLE=${GOOGLE}
+      - PGUSER=root
+      - PGHOST=database
+      - PGDATABASE=area
+      - PGPASSWORD=areapassword
+      - PGPORT=5432
+      - FLASK_APP=index.py
+  web:
+    depends_on:
+      - server
+    build: ./web
+    restart: unless-stopped
+    volumes:
+      - app:/usr/app
+    ports:
+      - '8081:8081'
+  bot_discord:
+      restart: always
+      build: ./discord
+      volumes:
+        - ./discord:/usr/app
+      environment:
+        - DISCORD_BOT=${DISCORD_BOT}
+  mobile:
+    build: ./mobile
+    volumes:
+      - app:/usr/app

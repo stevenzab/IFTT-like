@@ -1,0 +1,10 @@
+mat-card {
+    background-color: aliceblue;
+    /* max-width: 100px;
+    max-height: 50px;
+    min-width: 100px;
+    min-height: 50px;  */
+  }
+  mat-grid-tile {
+    background: rgb(206, 206, 206);
+  }

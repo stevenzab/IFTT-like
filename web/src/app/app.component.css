@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(224, 61, 61);
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.menu {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.Home {
+    display: inline-block;
+}
+
+.app-header {
+    background-color: #d7eef8;
+}

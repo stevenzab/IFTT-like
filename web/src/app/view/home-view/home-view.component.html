@@ -1,0 +1,52 @@
+
+<mat-drawer-container class="example-container" autosize>
+    <img src="https://i.imgur.com/SrCzOmO.png"/>
+    <app-home-grid 
+      (meteoEvent)="drawer.toggle()"
+      (steamEvent)="drawer.toggle()"
+      (discordEvent)="drawer.toggle()"
+      (outlookEvent)="drawer.toggle()"
+      (pornhubEvent)="drawer.toggle()"
+      (googleEvent)="drawer.toggle()"
+      (dogResponseEvent)="drawer.toggle()"
+      (edamamEvent)="drawer.toggle()"
+      (randomUserGenEvent)="drawer.toggle()"
+      (catResponseEvent)="drawer.toggle()"
+      (ipEvent)="drawer.toggle()"
+      (kittenEvent)="drawer.toggle()"
+      (numbEvent)="drawer.toggle()"
+      (factEvent)="drawer.toggle()"
+
+
+      (meteoEvent)="ToggleDraw(0)"
+      (steamEvent)="ToggleDraw(4)"
+      (discordEvent)="ToggleDraw(5)"
+      (outlookEvent)="ToggleDraw(2)"
+      (pornhubEvent)="ToggleDraw(6)"
+      (googleEvent)="ToggleDraw(1)"
+      (dogResponseEvent)="ToggleDraw(9)"
+      (edamamEvent)="ToggleDraw(3)"
+      (randomUserGenEvent)="ToggleDraw(8)"
+      (catResponseEvent)="ToggleDraw(7)"
+      (ipEvent)="ToggleDraw(10)"
+      (kittenEvent)="ToggleDraw(11)"
+      (numbEvent)="ToggleDraw(12)"
+      (factEvent)="ToggleDraw(13)"></app-home-grid>
+    <mat-drawer #drawer class="example-sidenav" mode="over" (closed)="closeEv()">
+      <app-meteo-content *ngIf="meteoOpen" [acrea]="acrea" [service]="services[0]" class="container" (meteoAcrea)="!drawer.toggle()" (meteoAcrea)="checkArea($event)"></app-meteo-content>
+      <app-steam-content *ngIf="steamOpen" [acrea]="acrea" [service]="services[4]" class="container" (steamAcrea)="!drawer.toggle()" (steamAcrea)="checkArea($event)"></app-steam-content>
+      <app-discord-content *ngIf="discordOpen" [acrea]="acrea" [service]="services[5]" class="container" (discordAcrea)="!drawer.toggle()" (discordAcrea)="checkArea($event)"></app-discord-content>
+      <app-pornhub-content *ngIf="pornhubOpen" [acrea]="acrea" [service]="services[6]" class="container" (phAcrea)="!drawer.toggle()" (phAcrea)="checkArea($event)"></app-pornhub-content>
+      <app-outlook-content *ngIf="outlookOpen" [acrea]="acrea" [service]="services[2]" class="container" (outlookAcrea)="!drawer.toggle()" (outlookAcrea)="checkArea($event)"></app-outlook-content>
+      <!-- <app-google-content *ngIf="googleOpen" [acrea]="acrea" [service]="services[1]" class="container" ></app-google-content> -->
+      <app-edamam-content *ngIf="edamamOpen" [acrea]="acrea" [service]="services[3]" class="container" (edamamAcrea)="!drawer.toggle()" (edamamAcrea)="checkArea($event)"></app-edamam-content>
+      <app-random-user-gen-content *ngIf="randomUserGenOpen" [acrea]="acrea" [service]="services[8]" class="container" (randomAcrea)="!drawer.toggle()" (randomAcrea)="checkArea($event)"></app-random-user-gen-content>
+      <app-dogresponse-content *ngIf="dogOpen" [acrea]="acrea" [service]="services[9]" class="container" (dogAcrea)="!drawer.toggle()" (dogAcrea)="checkArea($event)"></app-dogresponse-content>
+      <app-catresponse-content *ngIf="catOpen" [acrea]="acrea" [service]="services[7]" class="container" (catAcrea)="!drawer.toggle()" (catAcrea)="checkArea($event)"></app-catresponse-content>
+      <app-ip-content *ngIf="ipOpen" [acrea]="acrea" [service]="services[10]" class="container" (ipAcrea)="!drawer.toggle()" (ipAcrea)="checkArea($event)"></app-ip-content>
+      <app-numb-content *ngIf="numbOpen" [acrea]="acrea" [service]="services[12]" class="container" (numbAcrea)="!drawer.toggle()" (numbAcrea)="checkArea($event)"></app-numb-content>
+      <app-fact-content *ngIf="factOpen" [acrea]="acrea" [service]="services[13]" class="container" (factAcrea)="!drawer.toggle()" (factAcrea)="checkArea($event)"></app-fact-content>
+      <app-kitten-content *ngIf="kittenOpen" [acrea]="acrea" [service]="services[11]" class="container" (kittenAcrea)="!drawer.toggle()" (kittenAcrea)="checkArea($event)"></app-kitten-content>
+
+    </mat-drawer>    
+</mat-drawer-container>

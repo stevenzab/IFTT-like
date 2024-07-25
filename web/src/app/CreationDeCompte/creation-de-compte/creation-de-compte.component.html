@@ -1,0 +1,45 @@
+<div>
+    <form #registerFrom="ngForm" >
+        <mat-form-field appearance="outline" class="form-element">
+          <mat-label>Entrer votre prénom</mat-label>
+          <input matInput type="text" placeholder="Prénom" [(ngModel)]="account.username" class="form-control" [formControl]="prenom" name="first_name" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="outline" class="form-element">
+          <mat-label>Entrer votre Nom</mat-label>
+          <input matInput  type="text" placeholder="Nom" [(ngModel)]="account.FamName" class="form-control" [formControl]="nom" name="last_name" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="outline" class="form-element">
+          <mat-label>Entrer votre email</mat-label>
+          <input matInput  type="email" placeholder="pat@example.com" [(ngModel)]="account.email"  class="form-control" [formControl]="email" name="email" required>
+          <mat-error *ngIf="email.invalid">{{errorMessage()}}</mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="outline" class="form-element">
+          <mat-label>Enter le mot de passe</mat-label>
+          <input matInput type="text" [formControl]="mdp" [(ngModel)]="account.password" class="form-control" name="password" [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Cacher le mot de passe'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <br>
+        <div class="button">
+          <button mat-raised-button color="primary" type="button" type="submit" (click)="register()" [disabled]="checkForm()" class="btn-block">S'inscrire</button>
+        </div>
+        <div class="button">
+          <a href="/login">Vous avez déjà un compte ?</a>
+        </div>
+        <div class="container mt-5">
+          <div class="row mt-5">
+              <button type="button" class="register-with-google-btn" #registerRef>
+                  Inscrivez vous avec Google
+              </button>
+          </div>
+      </div>
+      </form>
+      <br>
+</div>

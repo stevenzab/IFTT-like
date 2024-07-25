@@ -1,0 +1,22 @@
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+    padding-left: 44%;
+}
+/* 
+.example-sidenav {
+    padding: 500px;
+  } */
+
+mat-drawer-container {
+  background-color: #d7eef8;
+  }
+  .container{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #d7eef8;
+    
+  }

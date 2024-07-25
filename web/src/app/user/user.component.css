@@ -1,0 +1,26 @@
+.user-profile mat-card-header {
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.user-profile{
+    margin-top: 15%;
+    height: 50%;
+}
+
+.user-profile .form {
+    max-width: 500px;
+    max-height: 200px;
+    min-width: 600px;
+    min-height: 200px;
+}
+
+/* .outline {
+    border-style: solid;
+    border-width: medium;
+} */
+
+.user-profile .cart {
+    background-color: aliceblue;
+}

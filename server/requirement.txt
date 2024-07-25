@@ -1,0 +1,11 @@
+Flask
+psycopg2-binary
+jwt
+bcrypt
+requests
+flask-cors
+flask-crontab
+flask_mail
+requests
+scrapy
+tweepy
